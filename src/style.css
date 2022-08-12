@@ -456,7 +456,7 @@ button:focus {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 370px !important;
+  padding-top: 400px !important;
   padding-bottom: 370px !important;
   background-image: var(--section-background-color) !important;
 }
