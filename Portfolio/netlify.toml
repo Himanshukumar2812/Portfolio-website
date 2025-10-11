@@ -1,0 +1,30 @@
+# Netlify configuration for Next.js static export
+[build]
+  # Base directory - where package.json is located
+  base = "."
+  # Build command
+  command = "npm ci && npm run build"
+  # Directory to publish (Next.js static export output)
+  publish = "out"
+  # Ignore node_modules and .next from processing
+  ignore = "node_modules"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "8"
+  # Increase memory limit if needed
+  NODE_OPTIONS = "--max_old_space_size=4096"
+
+# Handle client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
