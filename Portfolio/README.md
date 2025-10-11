@@ -135,13 +135,6 @@ portfolio-website/
 └── package.json            # Dependencies and scripts
 ```
 
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Deploy with automatic builds
 
 ### Other Platforms
 
@@ -153,21 +146,6 @@ npm run build
 npm run start
 ```
 
-## 🎯 Performance Optimizations
-
-- **Image Optimization**: Next.js automatic image optimization
-- **Code Splitting**: Automatic code splitting with Next.js
-- **Lazy Loading**: Components load when needed
-- **Minification**: Production builds are fully minified
-- **Caching**: Optimized caching strategies
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
@@ -182,4 +160,4 @@ If you have any questions or run into issues, please:
 
 ---
 
-**Built with ❤️ using modern web technologies**
+**Built with ❤️ using modern web technologies by Himanshu**
