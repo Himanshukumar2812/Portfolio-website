@@ -10,8 +10,7 @@
   ignore = "node_modules"
 
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_VERSION = "8"
+  NODE_VERSION = "18.20.2"
   # Increase memory limit if needed
   NODE_OPTIONS = "--max_old_space_size=4096"
 
