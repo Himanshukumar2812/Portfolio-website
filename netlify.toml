@@ -6,11 +6,12 @@
   command = "npm ci && npm run build"
   # Directory to publish (Next.js static export output)
   publish = "out"
-  # Ignore node_modules and .next from processing
-  ignore = "node_modules"
 
+[context.production.environment]
+  NODE_VERSION = "18"
 [build.environment]
-  NODE_VERSION = "18.20.2"
+  # Force Node.js 18.x to avoid deprecation warning
+  NODE_VERSION = "18"
   # Increase memory limit if needed
   NODE_OPTIONS = "--max_old_space_size=4096"
 

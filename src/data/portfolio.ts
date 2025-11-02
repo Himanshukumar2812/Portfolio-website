@@ -6,8 +6,8 @@ export const personalInfo: PersonalInfo = {
   tagline: "Transforming ideas into intelligent solutions",
   description: "Passionate AI/ML Engineer and Full Stack Developer with expertise in creating innovative machine learning solutions and modern web applications. I specialize in turning complex AI concepts into practical, user-friendly applications.",
   location: "Kolkata, India",
-  email: "himanshu.kumar@example.com",
-  phone: "+91 XXXXX-XXXXX",
+  email: "himanshum1928@gmail.com",
+  phone: "+91 93701-30762",
   avatar: "/images/avatar.jpg",
   resume: "/Himanshu-Kumar.pdf",
   socialLinks: [

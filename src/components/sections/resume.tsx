@@ -6,87 +6,6 @@ import { useInView } from 'react-intersection-observer'
 import { Download, Eye, ExternalLink, FileText, Star, Award, Briefcase, GraduationCap, Brain, Code, Database, Cloud } from 'lucide-react'
 import { personalInfo } from '@/data/portfolio'
 
-// Resume Stats Component
-const ResumeStats = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.3,
-  })
-
-  const stats = [
-    {
-      icon: Brain,
-      value: "4+",
-      label: "Years in AI/ML",
-      color: "text-purple-600 dark:text-purple-400",
-      bgColor: "bg-purple-100 dark:bg-purple-900/30"
-    },
-    {
-      icon: Code,
-      value: "25+",
-      label: "ML Projects",
-      color: "text-blue-600 dark:text-blue-400",
-      bgColor: "bg-blue-100 dark:bg-blue-900/30"
-    },
-    {
-      icon: Award,
-      value: "6+",
-      label: "Certifications",
-      color: "text-green-600 dark:text-green-400",
-      bgColor: "bg-green-100 dark:bg-green-900/30"
-    },
-    {
-      icon: Star,
-      value: "50+",
-      label: "Open Source Contributions",
-      color: "text-orange-600 dark:text-orange-400",
-      bgColor: "bg-orange-100 dark:bg-orange-900/30"
-    }
-  ]
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay: 0.5 }}
-      className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
-    >
-      {stats.map((stat, index) => (
-        <motion.div
-          key={stat.label}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-          whileHover={{ scale: 1.05, y: -5 }}
-          className="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-gray-900/20 hover:shadow-xl dark:hover:shadow-gray-900/30 transition-all duration-300"
-        >
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={inView ? { scale: 1, rotate: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.8 + index * 0.1, type: "spring", bounce: 0.5 }}
-            className={`w-16 h-16 rounded-full ${stat.bgColor} flex items-center justify-center mx-auto mb-4`}
-          >
-            <stat.icon className={`h-8 w-8 ${stat.color}`} />
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-            className={`text-3xl font-bold ${stat.color} mb-2`}
-          >
-            {stat.value}
-          </motion.div>
-          
-          <div className="text-gray-600 dark:text-gray-400 font-medium">
-            {stat.label}
-          </div>
-        </motion.div>
-      ))}
-    </motion.div>
-  )
-}
 
 // PDF Viewer Component
 const PDFViewer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
@@ -438,9 +357,6 @@ export default function Resume() {
 
         {/* Resume Actions */}
         <ResumeActions onViewResume={() => setIsViewerOpen(true)} />
-
-        {/* Resume Stats */}
-        <ResumeStats />
 
         {/* AI/ML Skills section removed per request */}
 
